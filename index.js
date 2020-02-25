@@ -29,14 +29,10 @@ and implement a method called teach which receives a string called subject,
 and prints out: Sean teaches WebDev
 */
 
-class Teacher {
-  constructor(name, subject) {
-    this.name = name;
-    this.subject = subject;
-  }
-  describe() {
-    console.log(`${this.name}, teaches ${this.subject}`);
+class Teacher extends Person {
+  teaches(subject) {
+    console.log(`${this.name}, teaches ${subject}`);
   }
 }
-const sean = new Teacher('Sean', 'Web Development');
-sean.describe();
+const sean = new Teacher('Sean');
+sean.teaches('Lego Fundamentals 101');
